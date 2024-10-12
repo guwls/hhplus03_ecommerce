@@ -108,10 +108,6 @@ sequenceDiagram
   orderService ->> orderRepository: 주문완료 상품 조회 요청 
   orderRepository -->> orderService: 주문와료 상품 조회 응답
   orderService -->> paymentFacade: 주문완료 상품 조회 응답 
-  paymentFacade ->> paymentService: 결제 저장 요청 
-  paymentService ->> paymentRepository: 결제 저장 요청 
-  paymentRepository -->> paymentService: 결제 저장 응답
-  paymentService -->> paymentFacade: 결제 저장 응답
   paymentFacade ->> balanceFacade: 결제금액 차감 요청
   balanceFacade ->> balanceFacade: 결제금액 차감
   balanceFacade ->> balanceService: 결제금액 차감 update 요청 
