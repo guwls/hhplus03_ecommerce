@@ -14,6 +14,7 @@ erDiagram
     USER {
         BIGINT      id      PK  "사용자 고유 id"
         VARCHAR     userId      "사용자 ID"
+        DECIMAL     amount      "사용자 잔액"
         TIMESTAMP createAt      "생성일자"
     }
 
